@@ -9,9 +9,9 @@ void addEdge(vector<int> graph[], int v, int u)
 
 
 
-void depthFirstSearch(vector<int> graph[], int start, int v)
+void depthFirstSearch(vector<int> graph[], int start, int v,int visited[])
 {
-    int visited[6+1] = {0};
+    
     cout<<start<<" ";
     visited[start] = 1;
     
@@ -19,7 +19,7 @@ void depthFirstSearch(vector<int> graph[], int start, int v)
     {
         if(visited[it] == 0)
         {
-            depthFirstSearch(graph,it,v);
+            depthFirstSearch(graph,it,v,visited);
         }
     }
 }
@@ -29,6 +29,7 @@ void depthFirstSearch(vector<int> graph[], int start, int v)
 int main()
 {
     int v = 7;
+    int visited[v] = {0};
     vector<int> graph[v];
     addEdge(graph,0,1);
     addEdge(graph,1,2);
@@ -38,6 +39,6 @@ int main()
     addEdge(graph,4,6);
     addEdge(graph,5,6);
     
-    depthFirstSearch(graph,0,v);
+    depthFirstSearch(graph,0,v,visited);
     
 }
