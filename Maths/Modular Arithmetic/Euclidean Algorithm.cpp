@@ -5,3 +5,8 @@ int findHCF(int a,int b)
     else
         return findHCF(b,a%b);
 }
+
+// Important Points
+// The value of b reduces in every next function call
+// If b is higheer in first call, a & b are swapped in next function call
+// b is always smaller than a, except possibly the first call 
