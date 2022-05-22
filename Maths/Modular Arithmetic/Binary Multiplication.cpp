@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-//This code helps when we have to multiply two bigger numbers greater than 10e8+7 and we have to take mod
+//This code can be used to multiply a, b times and take MoD. Here a and MoD can be very large.
 
 
 long long MoD = 10e9+7;
